@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#btn{
+			width: 100px;
+			height: 40px;
+			background: #ccc;
+		}
+		#select{
+			width: 100px;
+			height: 200px;
+			background: pink;
+		}
+		.show{
+			display: block;
+		}
+		.hidden{
+			display: none;
+		}
+		ul{
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="father">
+		<div id="btn"></div>
+		<div id="select" class="hidden">
+			<ul><li>111</li></ul>
+		</div>
+	</div>
+<script>
+		var oBtn=document.getElementById('btn');
+		var oSelect=document.getElementById('select');
+		var oFar=document.getElementById('father');
+			// 点击按钮控制下拉菜单的显示和隐藏
+		oBtn.onclick=function(ev){
+			// oSelect.style.display="null";
+			//第一次点击时值为空，执行else语句
+			console.log(oSelect.style.display);
+			console.log(oSelect.className);
+
+			var ev = ev || event;
+			ev.stopPropagation();//阻止冒泡
+			// 点击按钮出现隐藏下拉菜单
+			if(oSelect.className=="show"){
+				oSelect.className="hidden";
+			}else{
+				oSelect.className="show";
+			}
+
+		}
+		// 下拉菜单的点击显示菜单
+		oSelect.onclick=function(ev){
+			var ev = ev || event;
+			ev.stopPropagation();
+			oSelect.className="show";
+		}
+		// 页面点击隐藏菜单
+		document.onclick=function(){
+			oSelect.className="hidden";
+		}
+</script>
+</body>
+</html>

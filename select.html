@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>selecet</title>
+    <script src="jquery-3.2.1.min.js"></script>
+    <style>
+    .father {
+        float: left;
+        margin-left: 30px;
+    }
+
+    .btn {
+        width: 100px;
+        height: 40px;
+        background: #ccc;
+    }
+
+    .select {
+        width: 100px;
+        height: 200px;
+        background: pink;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="btn"></div>
+        <div class="select hidden">
+            <ul>
+                <li>111</li>
+            </ul>
+        </div>
+    </div>
+    <div class="father">
+        <div class="btn"></div>
+        <div class="select hidden">
+            <ul>
+                <li>111</li>
+            </ul>
+        </div>
+    </div>
+    <div class="father">
+        <div class="btn"></div>
+        <div class="select hidden">
+            <ul>
+                <li>111</li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+    var aBtn = document.getElementsByClassName('btn');
+    var aSelect = document.getElementsByClassName('select');
+    var aFar = document.getElementsByClassName('father');
+
+    var i = 0;
+    for (i = 0; i < aFar.length; i++) {
+
+        aBtn[i].index = i;
+        aSelect[i].index = i;
+
+        // 点击按钮控制下拉菜单的显示和隐藏
+        aBtn[i].onclick = function btnClick(ev) {
+            // oSelect.style.display="null";
+            //第一次点击时值为空，执行else语句
+            // console.log(oSelect.style.display);
+            // console.log(oSelect.className);
+            console.log(this.index);
+            var ev = ev || event;
+            ev.stopPropagation(); //阻止冒泡
+            
+            // 点击按钮出现隐藏下拉菜单
+            // console.log(aSelect[this.index].className);
+            if (aSelect[this.index].style.display == "block") {
+                console.log(this.index);
+
+                aSelect[this.index].style.display = "none";
+
+                // document.onclick = function(ev) {
+                //     aSelect[num].style.display = "none";
+                // }
+            } else {
+                console.log(this.index);
+                aSelect[this.index].style.display = "block";
+
+                // aBtn[i].onclick = function() {
+                //     aSelect[i].style.display = "none";
+                // }
+                // document.onclick = function(ev) {
+                //     aSelect[num].style.display = "none";
+                // }
+            }
+            var num = this.index;
+            	return num;
+        }
+        // 下拉菜单的点击显示菜单
+        aSelect[i].onclick = function(ev) {
+            var ev = ev || event;
+            ev.stopPropagation();
+            aSelect[this.index].style.display = "block";
+        }
+        // 页面点击隐藏菜单
+        // document.onclick=function(ev){
+        // 	var ev = ev || event;
+        // 	console.log(ev.target)
+        // 	// console.log($(.select).$("display[block]"));
+        // 	console.log(aSelect)
+        // 	// aSelect[this.index].style.display="none";
+        // }
+        document.onclick = function(ev) {
+        		btnClick();
+        		
+console.log(btnClick);
+                aSelect[num].style.display = "none";
+         }
+    }
+    </script>
+</body>
+
+</html>

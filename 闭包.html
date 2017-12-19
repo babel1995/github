@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+</head>
+<body>
+  <ul id="list">
+    <li>3123213</li>
+    <li>123123</li>
+    <li>123123</li>
+    <li>213123123123</li>
+    <li>21312312</li>
+  </ul>
+</body>
+</html>
+<script>
+window.onload = function (argument) {
+	// body...
+var list= document.getElementsByTagName('li');
+
+console.log(list);
+// for(var i=0;i<list.lenght;i++){
+  list[0].onclick = function(){
+    alert(0);
+  };
+
+};
+// }
+</script>

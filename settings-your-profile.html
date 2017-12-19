@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Your Profile</title>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="settings-your-profile.css">
+</head>
+<body>
+	<!-- 头部导航 -->
+	<header class="top-header">
+		<!-- 左边logo、搜索框、菜单 -->
+		<div class="main-wrap clearfix">
+			<div class="header-left clearfix fl">
+				<!-- logo -->
+				<div class="logo-img fl">
+					<svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+					
+				</div>
+				<!-- 输入框 -->
+				<div class="search-input fl">
+					<input type="text" class="search" placeholder="Search GitHub">
+				</div>
+				<!-- 菜单 -->
+				<ul class="menu fl">
+					<li><a href="">Pull requests</a></li>
+					<li><a href="">Issues</a></li>
+					<li><a href="">Marketplace</a></li>
+					<li><a href="">Explore</a></li>
+				</ul>
+			</div>
+			<!-- 右边图标 -->
+			<div class="header-right fr">
+				<ul class="right-icon">
+					<!-- 消息 -->
+					<!-- <li class="mail">						
+						<i class="icon-bell-alt"></i>
+						<i class="icon-circle"></i>
+					</li> -->
+					<!-- 加号 -->
+					<li class="add">
+
+						<a href=""><svg aria-hidden="true" class="octicon-plus " height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5z"/></svg>
+						<i class="icon-sort-down"></i></a>
+					</li>					
+					<!-- 用户小头像 -->				
+					<li class="user">
+					
+						<a href=""><img src="https://avatars3.githubusercontent.com/u/20218039?s=40&v=4" alt="" class="user-pic-small">
+						<i class="icon-sort-down"></i></a>
+					</li>					
+				</ul>
+			</div>
+		</div>
+	</header>
+	 <!-- 中部内容 -->
+	<div class="container main-wrap clearfix">
+		<!-- 导航栏 -->
+		<div class="personal-settings-list fl">
+			<nav class="settings-menu">
+				<h3>Personal settings</h3>
+				<a class="menu-selected" href="">Profile</a>
+				<a href="">Account</a>
+				<a href="">Emails</a>
+				<a href="">Notifications</a>
+				<a href="">Billing</a>
+				<a href="">SSH and GPG keys</a>
+				<a href="">Security</a>
+				<a href="">Blocked users</a>
+				<a href="">Repositories</a>
+				<a href="">Organizations</a>
+				<a href="">Saved replies</a>
+				<a class="botm-boder" href="">Applications</a>
+			</nav>
+			<nav class="settings-menu">
+				<a class="botm-boder" href="">Developer settings</a>
+			</nav>
+		</div>
+		<!-- 右部内容 -->
+		<div class="container-right fr">
+			<div class="title">
+				<h2 class="container-title">Public profile</h2>
+			</div>
+			<form class="main-container clearfix" action="">
+				<div class="form-list fl">
+					<dl class="form-group">
+						<dt>Name</dt>
+						<dd><input class="form-input" type="text" value="塔塔TaTa"></dd>
+					</dl>
+					<dl class="form-group">
+						<dt>Public email</dt>
+						<dd>
+							<select class="form-input form-select" name="" id="">
+								<option value="">Select a verified email to display</option>
+								<option value="1520907055@qq.com">1520907055@qq.com</option>
+							</select>
+							<p class="note font-small">You can manage verified email addresses in your <a href="">email settings</a>.</p>
+						</dd>
+					</dl>
+					<dl class="form-group">
+						<dt>Bio</dt>
+						<dd>
+							<textarea class="form-input">Be yourself</textarea>
+							<p class="note font-small">You can <strong>@mention</strong> other users and organizations to link to them.</p>
+						</dd>
+					</dl>
+					<dl class="form-group">
+						<dt>URL</dt>
+						<dd>
+							<input class="form-input" type="text" value="">
+						</dd>
+					</dl>
+					<dl class="form-group">
+						<dt>Company</dt>
+						<dd>
+							<input class="form-input" type="text" value="">
+							<p class="note font-small">You can <strong>@mention</strong> your company's GitHub organization to link it.</p>
+						</dd>
+					</dl>
+					<hr/>
+					<dl class="form-group">
+						<dt>Location</dt>
+						<dd>
+							<input class="form-input" type="text" value="Shanghai,China">
+						</dd>
+					</dl>
+					<p class="form-buttom"><button type="submit">Update profile</button></p>
+				</div>
+				<div class="user-picture fr">
+					<dl class="form-group form-user-pic">
+						<dt>Profile picture</dt>
+						<dd>
+							<img src="https://avatars1.githubusercontent.com/u/20218039?s=400&u=79020c7e1cbee3938014dbe32de304040d3cbc7d&v=4" alt="">
+							<div><button class="form-input btn-nocolor" type="submit">Upload new picture</button></div>
+						</dd>
+					</dl>
+				</div>
+
+			</form>
+			<p class="note font-small">We store your personal data in the United States. See our <a href="">privacy policy</a> for more information.</p>
+			<div class="subhed">
+				<h2>Contributions</h2>
+			</div>
+			<form class="contributions" action="">
+				<div>
+					<input class="checkbox" type="checkbox">
+					<label for="">Include private contributions on my profile</label>
+					<p class="font-small"> Get credit for all your work by showing the number of contributions to private repositories on your profile without any repository or organization information. <a class="a-blue" href="">Learn how we count contributions</a></p>
+				</div>
+				<button class="btn">Update contributions</button>
+			</form>
+			<div class="subhed subhed-1">
+				<h2>GitHub Developer Program</h2>
+			</div>
+			<div class="github-developer-programe">
+				<p>Building an application, service, or tool that integrates with GitHub? <a class="a-blue" href="">Join the GitHub Developer Program</a>,or read more about it at our <a class="a-blue" href="">Developer site</a>.</p>
+			</div>
+			<p class="note-1 font-small">
+				<a href="">Check out the Developer site</a> for guides, our API
+reference, and other resources for building applications that
+integrate with GitHub. Make sure your contact information is
+up-to-date below. Thanks for being a member!
+			</p>
+			<div class="subhed">
+				<h2>Jobs profile</h2>
+			</div>
+			<form action="" class="jobs-profile">
+				<div>
+					<input class="checkbox" type="checkbox">
+					<label for="">Available for hire</label>
+				</div>
+				<button class="btn">Save jobs profile</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- 脚部 -->
+	<footer class="bottom-footer main-wrap">
+		<div class="footer clearfix">
+			<ul class="footer-left fl">
+				<li>© 2017 GitHub, Inc.</li>
+				<li><a href="">Terms</a></li>
+				<li><a href="">Privacy</a></li>
+				<li><a href="">Security</a></li>
+				<li><a href="">Status</a></li>
+				<li class="last-li"><a href="">Help</a></li>
+			</ul>
+			<div class="footer-logo">
+				<a href=""><svg aria-hidden="true" class="footer-octicon" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+				</a>
+			</div>
+			<ul class="footer-right fr">
+				<li><a href="">Contact GitHub</a></li>
+				<li><a href="">API</a></li>
+				<li><a href="">Training</a></li>
+				<li><a href="">Shop</a></li>
+				<li><a href="">Blog</a></li>
+				<li class="last-li"><a href="">About</a></li>
+			</ul>
+		</div>
+	</footer>
+
+</body>
+</html>

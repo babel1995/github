@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>selecet</title>
+    <script src="jquery-3.2.1.min.js"></script>
+    <style>
+    .father {
+        float: left;
+        margin-left: 30px;
+    }
+
+    .btn {
+        width: 100px;
+        height: 40px;
+        background: #ccc;
+    }
+
+    .select {
+        width: 100px;
+        height: 200px;
+        background: pink;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="btn"></div>
+        <div class="select hidden">
+            <ul>
+                <li>111</li>
+            </ul>
+        </div>
+    </div>
+    <div class="father">
+        <div class="btn"></div>
+        <div class="select hidden">
+            <ul>
+                <li>111</li>
+            </ul>
+        </div>
+    </div>
+    <div class="father">
+        <div class="btn"></div>
+        <div class="select hidden">
+            <ul>
+                <li>111</li>
+            </ul>
+        </div>
+    </div>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+function showSelect(btnName,selectName,){
+	// 点击按钮显示下拉菜单
+    $(btnName).click(function(){
+    	// 显示的select对象的个数：0/1
+    	console.log($(selectName+':visible').length);
+    	var count = $(selectName+':visible').length;
+    	// 隐藏所有下拉菜单
+    	$(selectName).hide();
+    	// 当下拉菜单隐藏时，count为0，!count为1，执行if语句，下拉菜单显示
+    	// 当下拉菜单显示时，count为1，!count为0，不执行if语句，下拉菜单保持显示
+    	// if判断显示下拉
+    	if(!count){
+    		// 显示下拉菜单
+    		$(this).siblings(selectName).show();
+    	}
+    	console.log($(selectName+':visible').length);
+    	// 阻止默认事件，阻止冒泡，btn上的点击不触发document事件
+    	return false;
+    })
+    // 隐藏下拉菜单
+    $(document).click(function(ev) {
+    	// console.log($(event.target).parents().hasClass('select'));
+    	// 点击下拉本身，不隐藏
+    	// 当点击对象的class中有select（下拉菜单），或者点击对象的父元素中有select（下拉菜单的子元素），则结束函数，if后的语句不执行
+    	if($(ev.target).hasClass(selectName) || $(ev.target).parents().hasClass(selectName)){
+    		return false;
+    	}
+    	// 点击页面，隐藏所有下拉
+    	$(selectName).hide();
+    });
+}
+showSelect(".btn",".select");
+
+    // // 点击按钮显示下拉菜单
+    // $('.btn').click(function(){
+    // 	// 显示的select对象的个数：0/1
+    // 	console.log($('.select:visible').length);
+    // 	var count = $('.select:visible').length;
+    // 	// 隐藏所有下拉菜单
+    // 	$('.select').hide();
+    // 	// 当下拉菜单隐藏时，count为0，!count为1，执行if语句，下拉菜单显示
+    // 	// 当下拉菜单显示时，count为1，!count为0，不执行if语句，下拉菜单保持显示
+    // 	// if判断显示下拉
+    // 	if(!count){
+    // 		// 显示下拉菜单
+    // 		$(this).siblings('.select').show();
+    // 	}
+    // 	console.log($('.select:visible').length);
+    // 	// 阻止默认事件，阻止冒泡，btn上的点击不触发document事件
+    // 	return false;
+    // })
+    // // 隐藏下拉菜单
+    // $(document).click(function(event) {
+    // 	// console.log($(event.target).parents().hasClass('select'));
+    // 	// 点击下拉本身，不隐藏
+    // 	// 当点击对象的class中有select（下拉菜单），或者点击对象的父元素中有select（下拉菜单的子元素），则结束函数，if后的语句不执行
+    // 	if($(event.target).hasClass('select') || $(event.target).parents().hasClass('select')){
+    // 		return false;
+    // 	}
+    // 	// 点击页面，隐藏所有下拉
+    // 	$('.select').hide();
+    // });
+
+   //  function Dropdown (option) {
+   //  	var option = option || {};
+   //  	this.btn = $(option.btnClass ? option.btnClass : '.btn');
+   //  	this.content = $(option.selectClass ? option.selectClass : '.select');
+
+   //  	this.show = function () {
+   //  		var $content = this.content;
+   //  		var selectClass = this.option.selectClass;
+		 //    this.btn.click(function(){
+		 //    	var count = $(selectClass+':visible').length;
+		 //    	$content.hide();
+
+		 //    	if(!count){
+		 //    		$(this).siblings(selectClass).show();
+		 //    	}
+		 //    	return false;
+		 //    })
+   //  	}
+
+   //  	this.hide = function () {
+   //  		var $content = this.content;
+
+			// $(document).click(function(event) {
+
+	  //   		// 点击下拉本身，不隐藏
+	  //   		if($(event.target).hasClass('select') || $(event.target).parents().hasClass('select')){
+	  //   			return false;
+	  //   		}
+	  //   		// 隐藏下拉
+	  //   		$content.hide();
+	  //   	});
+   //  	}
+
+   //  	this.show();
+   //  	this.hide();
+   //  }
+
+
+   //  new Dropdown({
+   //  	btnClass: ''
+   //  });
+    </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

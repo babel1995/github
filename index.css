@@ -128,8 +128,9 @@ input
 	padding-left: 8px;
 	padding-right: 8px;
 	box-sizing: border-box;
-	font-weight: 600;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 13px;
+	/*font-weight: 600;
+*/	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	
 }
 .menu{
@@ -150,6 +151,7 @@ input
 .menu li a:hover{
 	color: #fff;
 }
+/*右边图标*/
 .header-right{
 	height: 30px;
 	line-height: 30px;
@@ -157,16 +159,20 @@ input
 .right-icon{
 
 }
-.right-icon li{
+.right-icon-li1,.right-icon-li2{
 	
 	margin-left: 8px;
 	margin-right: 8px;
 }
-.octicon-plus{
-	display: inline-block;
-    fill: #C8C9CB;
-    line-height: 30px;
+
+.r-i-l-a i{
+	color: rgba(255,255,255,0.75);
 }
+.r-i-l-a i:hover{
+	color: #fff;
+}
+
+/*小头像*/
 .right-icon .user{
 	margin-right: 0;
 }
@@ -176,6 +182,69 @@ input
 	height: 20px;
 	border-radius: 3px;
 	vertical-align: middle;
+}
+.dropdown-position{
+	position: relative;
+}
+/*菜单隐藏*/
+.dropdown-menu-hidden{
+	display: none;
+	position: absolute;
+	right: -1px;
+	width: 178px;
+	/*height: 254px;*/
+	margin-top: 8px;
+	padding: 5px 0;
+	border: 1px solid rgba(27,31,35,0.15);
+    border-radius: 4px;
+    box-shadow: 0 3px 12px rgba(27,31,35,0.15);
+    background: #fff;
+
+}
+/*菜单显示*/
+/*.dropdown-menu-active{
+	width: 178px;
+	height: 254px;
+	margin-top: 8px;
+	padding: 5px 0;
+	border: 1px solid rgba(27,31,35,0.15);
+    border-radius: 4px;
+    box-shadow: 0 3px 12px rgba(27,31,35,0.15);
+    background: #fff;
+
+}//用JQ写不用写显示的样式
+*//*下拉菜单右一定位*/
+/*.dropdown-menu-r1{
+	position: absolute;
+	right: -1px;
+}
+*/.dropdown-menu-ul li{
+	display: block;
+}
+
+.dropdown-menu-head{
+	font-size: 14px;
+	line-height: 1.5;
+	padding: 4px 15px 0 15px;
+	color: #586069;
+}
+.dropdown-menu-head strong{
+	font-weight: 600;
+}
+.dropdown-divider{
+    height: 1px;
+    margin: 8px 1px;
+    background-color: #e1e4e8;
+}
+.dropdown-menu-ul li a{
+	display: block;
+    padding: 4px 10px 4px 15px;
+    color: #24292e;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.dropdown-menu-ul li a:hover{
+	background: #0366d6;
 }
 /*中部内容*/
 .content{
@@ -241,6 +310,11 @@ input
 .contact-list li a{
 	color:#0366d6;;
 }
+/*.octicon{
+
+	color: #6a737d;
+    text-align: center;
+}*/
 .organizations{
 	width: 229px;
 	height: 66px;
@@ -276,7 +350,7 @@ input
 .content-menu a{
 	display: inline-block;
 	padding: 16px 8px;
-    margin-right: 16px;   
+    margin-right: 10.5px;   
     font-size: 14px;
     line-height: 21px;
     text-align: center; 
@@ -285,10 +359,21 @@ input
 .content-menu a:hover{
 	border-bottom: 2px solid #d1d5da;
 }
+.counter{
+	display: inline-block;
+    padding: 2px 5px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    color: #586069;
+    background-color: rgba(27,31,35,0.08);
+    border-radius: 20px;
+}
 .list-a-active{
-	border-bottom: 2px solid #586069;
-	border-bottom-color: #e36209;
+	border-bottom: 2px solid #586069 !important;
+	border-bottom-color: #e36209 !important;
 	color: #24292e !important;
+	font-weight: 600 !important;
 }
 
 .repositories-list{
@@ -428,8 +513,9 @@ input
 	font-size: 12px;
 	line-height: 1.5;
 	color: #586069;
-
-
+}
+.activity-button ul li a:hover{
+	background: rgba(27,31,35,0.08);
 }
 .filter-item-selected {
     color: #fff !important;
@@ -437,15 +523,24 @@ input
 }
 .jump-to{
 	display: inline-block;
-	position: absolute;
-	top: 0;
-	right: 121.16px;
+	
 	margin-top: 4px;
 	font-size: 13px;
 	line-height: 1.5;
 	font-weight: 400 !important;
 	color: #586069 !important;
 
+}
+.jump-to-layout{
+	position: absolute;
+	top: 0;
+	right: 121.16px;
+}
+.jump-to i{
+	color: #586069;
+}
+.jump-to-width{
+	width: 158px;
 }
 .contribution-activity{
 	width: 606px;
